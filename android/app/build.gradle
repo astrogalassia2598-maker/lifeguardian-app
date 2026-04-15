@@ -1,1 +1,28 @@
+def flutterVersionCode = 1
+def flutterVersionName = "1.0"
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.example.lifeguardian"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode flutterVersionCode
+        versionName flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.10"
+}
 
